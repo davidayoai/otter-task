@@ -1,0 +1,35 @@
+{
+  "task_id": "otter/my-task-name",
+  "_pass_criteria_help": [
+    "Each key must match a key in the 'metrics' dict returned by checks.py.",
+    "",
+    "Simple form (number) — higher is better, uses >= comparison:",
+    "  \"auroc\": 0.80",
+    "",
+    "Object form — for metrics where lower is better or exact match:",
+    "  \"loss\": {\"threshold\": 0.5, \"comparison\": \"lte\"}",
+    "",
+    "Supported comparisons: gte (>=), gt (>), lte (<=), lt (<), eq (==)",
+    "Default comparison when using simple form: gte (>=)"
+  ],
+  "pass_criteria": {
+    "auroc": 0.80,
+    "max_platform_fpr_disparity": {
+      "threshold": 0.25,
+      "comparison": "lte"
+    }
+  },
+
+  "attempts": [
+    {
+      "id": "human_1",
+      "architecture": "Model architecture used (e.g., regularized logistic classifier with feature selection).",
+      "augmentations": "Data processing or augmentation applied (e.g., signed/unsigned edge channel separation, StandardScaler, SelectKBest).",
+      "description": "One-sentence summary of the approach.",
+      "metrics": {
+        "auroc": 0.85,
+        "max_platform_fpr_disparity": 0.22
+      }
+    }
+  ]
+}
