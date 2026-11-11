@@ -1,0 +1,6 @@
+{
+  "auroc": 0.815701,
+  "accuracy": 0.73,
+  "f1": 0.758209,
+  "max_platform_fpr_disparity": 0.014286
+}

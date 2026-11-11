@@ -19,7 +19,7 @@ COPY requirements.lock /tmp/requirements.lock
 RUN pip install --require-hashes --no-deps -r /tmp/requirements.lock
 
 # Copy the actual dataset
-COPY task_inputs/data/ /app/data/
+COPY task_inputs/data.csv /app/data/data.csv
 
 RUN mkdir -p /app/src /app/artifacts /app/reports /app/models \
     && test -f /app/data/data.csv

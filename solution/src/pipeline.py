@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Reference pipeline for [YOUR TASK NAME].
+"""Reference pipeline for otter/fairness-tabular-classification.
 
 This module contains the oracle solution. solve.sh copies it into /app/src/
 and run.py calls run_full() to produce all required artifacts.
@@ -130,9 +129,12 @@ def _resolve_data_path(path: str | Path | None = None) -> Path:
     for candidate in candidates:
         if candidate.exists():
             return candidate
-    fallback = APP_DIR / "data" / "data.csv"
-    _default_synthetic_dataset(fallback)
-    return fallback
+    raise FileNotFoundError(
+    "Dataset not found. Expected one of: "
+    "/app/data/data.csv, "
+    "/app/data/input_data.csv, "
+    "/app/data/input_data.npz"
+)
 
 
 def _load_dataframe(path: Path) -> pd.DataFrame:

@@ -1,0 +1,22 @@
+{
+  "source": "C:\\Users\\USER\\OneDrive\\Desktop\\Otter-Task-Skeleton\\Otter-Task-Skeleton\\workdir\\data\\data.csv",
+  "n_samples": 1200,
+  "n_features": 4,
+  "target_column": "target",
+  "protected_column": "platform",
+  "splits": {
+    "train": 900,
+    "test": 300
+  },
+  "feature_names": [
+    "age",
+    "income",
+    "credit_score",
+    "prior_default_count"
+  ],
+  "preprocessing_steps": [
+    "imputation",
+    "one_hot_encoding",
+    "standard_scaling"
+  ]
+}
