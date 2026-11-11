@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Task-specific verifier checks for the fairness classification task."""
 from __future__ import annotations
 

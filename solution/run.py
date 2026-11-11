@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Oracle entrypoint — runs the full pipeline end-to-end.
 
 This is a thin CLI wrapper. All real logic lives in src/pipeline.py.

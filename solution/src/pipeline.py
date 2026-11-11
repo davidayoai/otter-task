@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Reference pipeline for [YOUR TASK NAME].
 
 This module contains the oracle solution. solve.sh copies it into /app/src/
